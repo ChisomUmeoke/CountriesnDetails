@@ -1,13 +1,71 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: #f1f5f8;
+  color: #222;
+  overflow-x: hidden;
+}
+
+.country-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/* .country-row1-item1 {
+  border-radius: 1em;
+  padding: 0.85em 1em 2em 1em;
+  background-color: white;
+  float: left;
+  margin-right: 2em;
+  margin-top: 2em;
+} */
+.country-row1-item1 {
+  border-radius: 1em;
+  padding: 0.75em 1em 2em 1em;
+  background-color: white;
+  margin-right: 2em;
+  margin-top: 2em;
+}
+.county-name {
+  margin-top: 1em;
+}
+.country-region,
+.country-population,
+.county-name,
+.country-capital {
+  color: black;
+  font-size: 0.75em;
+  margin-top: 0.25em;
+}
+
+@media only screen and (max-width: 480px) {
+  .country-header {
+    display: none;
+  }
+
+  .country-group {
+    flex-direction: column;
+    align-content: center;
+    width: 97vw;
+  }
+
+  .country-row1-item1 {
+    display: block;
+    margin: 1em auto;
+    margin-left: 0.45em;
+  }
+}
+
+@media screen and (device-aspect-ratio: 40/71) {
+  .country-group {
+    display: block;
+    margin-left: 0.59em;
+  }
 }
